@@ -1,0 +1,34 @@
+<!--pages/biz/monitor/home/home.wxml-->
+<view class="p">
+<view class="services_container">
+    <view class='top'>
+        <block wx:for="{{['视频']}}" wx:key="unique">
+            <view bindtap='onTabsItemTap' data-index='{{index}}' class="top-item">
+                <text class="{{currentTabsIndex==index?'on':''}}">{{item}}</text>
+            </view>
+        </block>
+    </view>
+    <view class='box'>
+        <view class='video' hidden="{{currentTabsIndex!=0}}">
+            <block wx:for="{{DanceList}}">
+                <view class='video-item'>
+					<view class='wrapper'>
+						<video class='video-video' wx:if='{{index==videoIndex}}' id='video{{index}}' autoplay='{{true}}' show-center-play-btn="{{false}}" src='{{item.url}}'></video>
+						<image class='video-video2' wx:if='{{index!=videoIndex}}' mode='aspectFill' src='{{item.text}}'></image>
+						<image class='videoPlay' wx:if='{{index!=videoIndex}}' data-index='{{index}}' bindtap='videoPlay' src='../../../../assets/images/play.png'></image>
+					</view>
+                    <view class='video-name'>{{item.title}}</view>
+                    <view class='video-desc' style="{{item.upStatus?'':'display:-webkit-box'}}">{{item.content}}</view>
+                    <view class='video-bottom'>
+                        <view class='video-btn' data-index="{{index}}" bindtap='upDown'>
+                            <image hidden='{{item.upStatus}}' src='../../../../assets/images/slide.png'></image>
+                            <image hidden='{{!item.upStatus}}' src='../../../../assets/images/up.png'></image>
+                            <text>{{!item.upStatus?'展开':'收起'}}</text>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+</view>
+</view>

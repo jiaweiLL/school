@@ -1,0 +1,73 @@
+<form bindsubmit='sub' >
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class="weui-cells__title">导出</view>
+    <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell weui-cell_input">
+  <view class="weui-cell__hd">
+        <view class="weui-cell__hd">
+           <view class="weui-label" style="padding:10rpx">导出类型</view>
+        </view>
+          <radio-group bindchange="radioChange">
+              <radio value='库存表' checked>库存表</radio>
+              <radio value='申请表'>申请表</radio>
+              <radio value='账目表'>入账表</radio>
+          </radio-group>
+  </view>
+  </view>
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">开始时间</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" value="{{date}}" start="2010-01-01" end="2030-01-01" bindchange="bindDateChange" name="age">
+            <view class="picker">
+              选择: {{date}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">结束时间</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" value="{{time}}" name="time" start="2010-01-01" end="2030-01-01" bindchange="bindtimeChange">
+            <view class="picker" name="time">
+              选择: {{time}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">所属部门</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='adepartment' placeholder="请输入部门名" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">邮箱地址</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='receive' placeholder="请输入邮箱地址" />
+        </view>
+      </view>
+      <view class="graySpace"></view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">邮件主题</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='subject' placeholder="请输入邮件主题" />
+        </view>
+      </view> 
+    </view>   
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" formType="submit">确定</button>
+    </view>
+</view>
+</view>
+</form>

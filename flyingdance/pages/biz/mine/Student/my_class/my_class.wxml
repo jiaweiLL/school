@@ -1,0 +1,37 @@
+
+
+<view class="page">
+    <view class="services_container">
+    <view class="page__bd">
+
+        </view>
+        <view class='box'>
+
+        <view class="weui-cells__title">课程信息</view>
+          <view class="page__bd">      
+              <view class="weui-cells">
+                  <mp-cell value="课程老师" footer="{{list.head_name}}"></mp-cell>
+              </view>
+              <view class="weui-cells">
+                  <mp-cell value="老师电话" footer="{{teacher_phone}}"></mp-cell>
+              </view>    
+              <view class="weui-cells">
+                  <mp-cell value="课程名称" footer="{{list.curriculum}}"></mp-cell>
+              </view>    
+              <view class="weui-cells">
+                  <mp-cell value="剩余课时" footer="{{list.class_hour}}"></mp-cell>
+              </view>     
+              <view class="weui-cells">
+                  <mp-cell value="学费" footer="{{list.renew}}"></mp-cell>
+              </view>    
+               <view class="weui-btn-area">
+
+            <button class="weui-btn" style="background:green" bindtap="viewClick01">联系老师</button>
+
+           </view>                          
+          </view>
+         
+        </view>
+        
+    </view>  
+</view>

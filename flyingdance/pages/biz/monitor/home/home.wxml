@@ -1,0 +1,126 @@
+<!--pages/biz/monitor/home/home.wxml-->
+<view class="page" data-weui-theme="{{theme}}">
+<view wx:if="roll!=0">
+<swiper class="imageContainer" bindchange="handleChange" previous-margin="50rpx" next-margin="50rpx" circular autoplay>
+  <block wx:for="{{RollPicture}}" wx:key="{{index}}">
+    <swiper-item class="item">
+      <image class="itemImg {{currentIndex == index ? ' active ': ' '}}" src='{{item.url}}'></image>
+      <!-- <view class="itemImg {{currentIndex == index ? ' active ': ' '}}" style='background: {{bgColor}};'></view> -->
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+<!-- <view class='layout'><text style='color:{{bgColor}}'>这是一个寂寞的天，下着有些伤心的雨</text></view> -->
+
+<view class="services_container">
+    <view class='top'>
+        <block wx:for="{{['学校精彩','学校公告']}}" wx:key="unique">
+            <view bindtap='onTabsItemTap' data-index='{{index}}' class="top-item">
+                <text class="{{currentTabsIndex==index?'on':''}}">{{item}}</text>
+            </view>
+        </block>
+    </view>
+    <view class='box'>
+        <view class='video' hidden="{{currentTabsIndex!=0}}">
+            <block wx:for="{{videoArray}}" wx:key="unique">
+                <view class='video-item'>
+					<view class='wrapper'>
+						<video class='video-video' wx:if='{{index==videoIndex}}' id='video{{index}}' autoplay='{{true}}' show-center-play-btn="{{false}}" src='{{item.url}}'></video>
+						<image class='video-video2' wx:if='{{index!=videoIndex}}' mode='aspectFill' src='{{item.text}}'></image>
+						<image class='videoPlay' wx:if='{{index!=videoIndex}}' data-index='{{index}}' bindtap='videoPlay' src='../../../../assets/images/play.png'></image>
+					</view>
+                    <view class='video-name'>{{item.title}}</view>
+                    <view class='video-desc' style="{{item.upStatus?'':'display:-webkit-box'}}">{{item.content}}</view>
+                    <view class='video-bottom'>
+                        <view class='video-btn' data-index="{{index}}" bindtap='upDown'>
+                            <image hidden='{{item.upStatus}}' src='../../../../assets/images/slide.png'></image>
+                            <image hidden='{{!item.upStatus}}' src='../../../../assets/images/up.png'></image>
+                            <text>{{!item.upStatus?'展开':'收起'}}</text>
+                        </view>
+                    </view>
+                </view>
+            </block>
+            <view wx:if="{{loadnone==''}}">
+                <view style="justify-content: center;display:flex;text-align: center;" bindtap="loadmore">
+                        <mp-icon icon="more" color="black" size="{{25}}"></mp-icon>
+                </view>
+            </view>
+            <view wx:else>
+                <text style="justify-content: center;display:flex;text-align: center;">{{loadnone}}</text>
+            </view>
+            
+            <text style="justify-content: center;display:flex;text-align: center;">.......</text>
+            <text style="justify-content: center;display:flex;text-align: center;">加载</text>
+        </view>
+        <view hidden="{{currentTabsIndex!=1}}">
+            <view class="cu-bar bg-white solid-bottom margin-top">
+                <view class='action'>
+                    <text class='cuIcon-titles text-orange '></text> 学校文章公告
+                </view>
+                <view class='action'>
+                    <switch class='sm' checked='{{isCard}}' bindchange='isCard'></switch>
+                </view>
+       </view>
+                <view class="cu-card article {{isCard?'no-card':''}}">
+                <block wx:for="{{audioArray}}" wx:key="unique">
+                    <view class="cu-item shadow" id="{{item.id}}" bindtap="tonoticeContent">
+                        <view class="title">
+                            <view class="text-cut">{{item.title}}</view>
+                        </view>
+                        <view class="content">
+                            <image src="{{item.url}}" mode="aspectFill"></image>
+                            <view class="desc">
+                                <view class="text-content">{{item.content}}</view>
+                            <view>
+                            <view class="cu-tag bg-red light sm round">小飞天</view>
+                            <view class="cu-tag bg-green light sm round">公告</view>
+                        </view>
+                    </view>
+                </view>
+                </view>
+                </block>  
+                <view wx:if="{{loadnoneNotice==''}}">
+                <view style="justify-content: center;display:flex;text-align: center;" bindtap="loadNotice">
+                        <mp-icon icon="more" color="black" size="{{25}}"></mp-icon>
+                </view>
+            </view>
+            <view wx:else>
+                <text style="justify-content: center;display:flex;text-align: center;">{{loadnoneNotice}}</text>
+            </view>
+            
+            <text style="justify-content: center;display:flex;text-align: center;">.......</text>
+            <text style="justify-content: center;display:flex;text-align: center;">加载</text>
+            </view>
+        </view>
+    </view>
+</view>
+     
+    
+    <!-- <audio src='{{audioSrc}}' loop='{{true}}' style='display:none'></audio> -->
+
+</view>
+<!-- <block wx:for="{{audioArray}}" wx:key="unique">
+                <view class='audio-item' id="{{item.id}}" bindtap="tonoticeContent">
+                    <view class='audio-left'>
+                        <image class='audio-audio' src='{{item.url}}'></image>
+                    </view>
+                    <view class='audio-content'>
+                        <view class='audio-name'>{{item.title}}</view>
+                        <view class='audio-desc'>{{item.content}}</view>
+                    </view>
+                    <view class='audio-right'>
+                        <image hidden='{{musicIndex!=index}}' src='../../../../assets/images/playing.gif'></image>
+                    </view>
+                </view>
+            </block>
+            <view wx:if="{{loadnoneNotice==''}}">
+                <view style="justify-content: center;display:flex;text-align: center;" bindtap="loadNotice">
+                        <mp-icon icon="more" color="black" size="{{25}}"></mp-icon>
+                </view>
+            </view>
+            <view wx:else>
+                <text style="justify-content: center;display:flex;text-align: center;">{{loadnoneNotice}}</text>
+            </view>
+            
+            <text style="justify-content: center;display:flex;text-align: center;">.......</text>
+            <text style="justify-content: center;display:flex;text-align: center;">加载</text> -->

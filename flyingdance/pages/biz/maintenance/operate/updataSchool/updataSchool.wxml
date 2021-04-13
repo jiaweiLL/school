@@ -1,0 +1,80 @@
+<form bindsubmit='updata'>
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class="weui-cells__title">查看资料</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">姓名</view>
+        </view>
+        <view class="weui-cell__bd">
+        <text>{{teacherData.name}}</text>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">账号</view>
+        </view>
+        <view class="weui-cell__bd">
+        <text>{{teacherData.sno}}</text>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">密码</view>
+        </view>
+        <view class="weui-cell__bd">
+        <text>{{teacherData.password}}</text>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">性别</view>
+        </view>
+        <view class="weui-cell__bd">
+        <text>{{teacherData.sex}}</text>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">年龄</view>
+        </view>
+        <view class="weui-cell__bd">
+        <text>{{teacherData.age}}</text>
+          
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">电话</view>
+        </view>
+        <view class="weui-cell__bd">
+        <text>{{teacherData.phone}}</text>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">校区</view>
+        </view>
+        <view class="weui-cell__bd">
+          <text>{{teacherData.school}}</text>
+         
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__title">家庭地址</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+        <text>{{teacherData.address}}</text>
+        </view>
+      </view>
+    </view> 
+    <view class="weui-btn-area">
+
+            <button class="weui-btn" style="background:green" bindtap="viewClick01">联系校长</button>
+
+    </view>      
+</view>
+</view>
+</form>

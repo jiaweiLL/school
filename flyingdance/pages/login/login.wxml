@@ -1,0 +1,26 @@
+
+<view class='container '>
+  <view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"/>
+  </view>
+  <view class="login-from"> 
+  <!--账号-->
+    <view class="inputView">
+      <label class="loginLab">账号:</label>
+      <input class="inputText" name="sno" placeholder="请输入账号" bindinput="phoneInput" />
+    </view>
+  <!--密码-->
+  <view class="inputView">
+    <label class="loginLab">密码:</label>
+    <input class="inputText" name="password" password="true" placeholder="请输入密码"
+    bindinput="passwordInput"/>
+  </view>
+  <!--按钮-->
+    <view class="loginBtnView">
+      <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+       授权登录
+     </button>
+      <!-- <button class="loginBtn" form-type='submit' type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}" disabled="{{disabled}}">登录</button> -->
+    </view>
+  </view>
+</view>

@@ -1,0 +1,75 @@
+<form bindsubmit='updata'>
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class="weui-cells__title">编辑资料</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">姓名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='name' value="{{StudentData.name}}"  placeholder="{{StudentData.name}}" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">账号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value="{{StudentData.phone}}" name='phone' placeholder="{{StudentData.phone}}" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">密码</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value="{{StudentData.password}}" name='password' placeholder="{{StudentData.password}}" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">性别</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value="{{StudentData.sex}}" name='sex' placeholder="{{StudentData.sex}}" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">年龄</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value="{{StudentData.age}}" name='age' placeholder="{{StudentData.age}}" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">舞蹈等级</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value="{{StudentData.level}}" name='level' placeholder="{{StudentData.level}}" />
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__title">家庭地址</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" name='address' value="{{StudentData.address}}" placeholder="{{StudentData.address}}" style="height: 3.3em" />
+          <view class="weui-textarea-counter">0/200</view>
+        </view>
+      </view>
+    </view>
+   
+    <view class="weui-btn-area">
+
+      <button class="weui-btn" type="primary" formType="submit">确定</button>
+
+    </view>
+
+ 
+
+</view>
+</view>
+</form>

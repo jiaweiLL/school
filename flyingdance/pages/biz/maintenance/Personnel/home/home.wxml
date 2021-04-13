@@ -1,0 +1,20 @@
+<view class="page" data-weui-theme="{{theme}}">
+    <view class="page__hd">
+        <view class="page__title">小飞天舞蹈</view>
+    </view>
+    <view class="page__bd page__bd_spacing">
+        <view class="kind-list">
+            <block wx:for="{{list}}" wx:key="id">
+                <view class="kind-list__item">
+                    <view id="{{item.id}}" class="weui-flex kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}" bindtap="gopage" data-url="{{item.url}}">
+                        <view class="weui-flex__item">{{item.name}}</view>
+                        <image class="kind-list__img" src="../../../../../assets/images/icon_nav_nav.png"></image>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="page__ft" bindtap="changeTheme">
+        <image src="../../../../../assets/images/icon_footer.png" style="width: 84px; height: 19px;"></image>
+    </view>
+</view>

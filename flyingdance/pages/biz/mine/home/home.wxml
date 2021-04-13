@@ -1,0 +1,58 @@
+<!--pages/biz/mine/home/home.wxml-->
+<view>
+    <!-- 学生我的界面 -->
+    <view wx:if="{{role=='1'}}">
+        <scroll-view scroll-y="true">
+        <view class="graySpace"></view>
+        <view  bindtap="toPersonal" class="item-avatar-lg" >
+            <open-data type="userAvatarUrl" class="tou"></open-data>
+            <!-- <image type="userAvatarUrl"  background-size="cover"></image> -->
+            <!-- <image background-size="cover"></image> -->
+            <view class="text_box padding"  bindtap="toPersonal">
+                <view class="flex">
+                    <text class="title">{{userInfo.nickName}}</text>
+                </view>
+                <view class="flex">
+                    <text class="title">地址：{{useraddress}}</text>
+                </view>
+            </view></view>
+        <view wx:for="{{list_student}}" wx:for-item="item">
+            <view class="graySpace"></view>
+            <view class="item-avatar-xs" wx:for="{{item.list_tool}}" wx:for-item="i" data-log="{{i.name}}" data-url="{{i.url}}" bindtap="goPage1">
+                <image src="{{i.img}}" />
+                <view style="padding-left:10px">
+                    <text class="title">{{i.name}}</text>
+                </view>
+            </view></view>
+        </scroll-view>
+    </view>
+    <!-- 工作我的界面 -->
+    <view wx:elif="{{role=='2'}}">
+     <scroll-view scroll-y="true">
+        <view class="graySpace"></view>
+        <view  bindtap="toPersonal" class="item-avatar-lg" >
+            <open-data type="userAvatarUrl" class="tou"></open-data>
+            <!-- <image src="{{userInfo.avatarUrl}}" background-size="cover"></image> -->
+            <view class="text_box padding"  bindtap="toPersonal">
+                <view class="flex">
+                    <text class="title">{{userInfo.nickName}}</text>
+                </view>
+                <view class="flex">
+                    <text class="title">地址：{{useraddress}}</text>
+                </view>
+            </view>
+        </view>
+        <view wx:for="{{list_teacher}}" wx:for-item="item">
+            <view class="graySpace"></view>
+            <view class="item-avatar-xs" wx:for="{{item.list_tool}}" wx:for-item="i" data-log="{{i.name}}" data-url="{{i.url}}" bindtap="goPage1">
+                <image src="{{i.img}}" />
+                <view style="padding-left:10px">
+                    <text class="title">{{i.name}}</text>
+                </view>
+            </view>
+        </view>
+     </scroll-view>
+    </view>
+</view>
+
+    

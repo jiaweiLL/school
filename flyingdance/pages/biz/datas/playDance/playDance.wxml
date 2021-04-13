@@ -1,0 +1,19 @@
+<!--pages/post/post-detail/post-detail.wxml-->
+<!--先静后动，先样式再数据-->
+<view class="detail-container">
+<video src="{{DanceData.url}}" class="head-image" controls="true"  show-mute-btn="true" poster="{{detail.movieImg}}" id='myVideo'  title="{{detail.title}}" bindwaiting="bindwaiting" bindplay="bindplay"  custom-cache="{{false}}" bindtimeupdate="bindtimeupdate" binderror="binderror">
+  </video>
+  <view class="author-date">
+    <mp-icon icon="sticker" color="black" size="{{25}}"></mp-icon>
+    <text class="author">{{DanceData.putname}}</text>
+    <text class="const-text">发表于</text>
+    <text class="date">{{DanceData.time}}</text>
+  </view>
+  <text class="title">{{DanceData.title}}）</text>
+  <view class="tool">
+    <view class="circle-img">
+    </view>
+    <view class="horizon"></view>
+  </view>
+  <text class="detail">{{DanceData.content}}</text>
+</view>

@@ -1,0 +1,125 @@
+<form bindsubmit='sub'>
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class="weui-cells__title">库存基本信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">品名</view>
+        </view>
+        <view class="weui-cell__bd">
+        <text>{{ApplyData.aproduct_name}}</text>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">品牌</view>
+        </view>
+       <view class="weui-cell__bd">
+       <text>{{ApplyData.abrand}}</text>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">规格</view>
+        </view>
+        <view class="weui-cell__bd">
+        <text>{{ApplyData.aspecifications}}</text>
+        </view>
+      </view>
+      <view class="graySpace"></view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">类别</view>
+        </view>
+        <view class="weui-cell__bd">
+        <text>{{ApplyData.acategory}}</text>
+          
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">计量单位</view>
+        </view>
+         <view class="weui-cell__bd">
+          <text>{{ApplyData.aunit}}</text>
+        </view>
+      </view>
+     <view class="graySpace"></view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">库存数量</view>
+        </view>
+        <view class="weui-cell__bd">
+          <text>{{ApplyData.anumber}}</text>
+          
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">采购价格</view>
+        </view>
+        <view class="weui-cell__bd">
+          <text>{{ApplyData.abuy_price}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__title">申请信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">申请数量</view>
+        </view>
+        <view class="weui-cell__bd">
+          <text>{{ApplyData.anumber}}</text>
+        </view>
+      </view>
+      <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">总金额</view>
+        </view>
+        <view class="weui-cell__bd">
+          <text>{{ApplyData.aprice}}</text>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">领用部门</view>
+        </view>
+        <view class="weui-cell__bd">
+        <text>{{ApplyData.adepartment}}</text>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">领用人</view>
+        </view>
+        <view class="weui-cell__bd">
+           <text>{{ApplyData.aname}}</text>
+        </view>
+      </view>
+       <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">用途</view>
+        </view>
+        <view class="weui-cell__bd">
+           <text>{{ApplyData.ause}}</text>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">领用时间</view>
+        </view>
+        <view class="weui-cell__bd">
+         <text>{{ApplyData.atime}}</text>
+        </view>
+      </view>  
+    </view>
+    </view>
+</view>
+ 
+
+
+</view>
+</form>

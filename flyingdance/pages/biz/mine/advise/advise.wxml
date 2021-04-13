@@ -1,0 +1,29 @@
+<form bindsubmit='sub' >
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class="weui-cells__title">反馈</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">反馈问题</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='subject' placeholder="请输入反馈问题" />
+        </view>
+      </view>
+    </view>   
+    <view class="weui-cells__title">问题描述</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" name='msg' placeholder="请输入问题具体描述" style="height: 3.3em" />
+          <view class="weui-textarea-counter">0/200</view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="primary" formType="submit">确定</button>
+    </view>
+</view>
+</view>
+</form>

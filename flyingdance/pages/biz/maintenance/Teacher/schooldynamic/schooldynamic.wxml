@@ -1,0 +1,24 @@
+<view class="page">
+    <view class="services_container">
+        <view class='top'>
+            <block wx:for="{{['学校动态']}}">
+                <view bindtap='onTabsItemTap' data-index='{{index}}' class="top-item">
+                    <text class="{{currentTabsIndex==index?'on':''}}">{{item}}</text>
+                </view>
+            </block>
+        </view>
+        <view class='box'>
+        <view class="page__bd">
+                <block wx:for="{{list}}" wx:key="unique">             
+                        <view class="weui-cells">
+                            <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" throttle="30" index="{{id}}">
+                            <mp-cell value="{{item.name}}" footer="{{item.time}}" id="{{item.id}}"></mp-cell>
+                            <mp-cell><view  style="text-align: center;color:red">{{item.title}}</view></mp-cell>
+                            <mp-cell><view  style="padding-left:30rpx;font-size:30rpx">{{item.text}}</view></mp-cell>
+                            </mp-slideview>
+                        </view>                
+                </block>     
+        </view>
+        </view>
+    </view>  
+</view>

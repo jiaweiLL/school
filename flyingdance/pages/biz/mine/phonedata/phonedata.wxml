@@ -1,0 +1,26 @@
+
+<mp-cells ext-class="my-cells" title="手机信息">
+    <mp-cell>
+        <view>手机型号  :{{mobileModel}}</view>
+    </mp-cell>
+     <mp-cell>
+        <view>设备像素比:{{mobileePixelRatio}}</view>
+    </mp-cell>
+    <view class="graySpace"></view>
+     <mp-cell>
+        <view>屏幕宽度:{{windowWidth}}</view>
+    </mp-cell>
+    <mp-cell>
+        <view>屏幕高度:{{windowHeight}}</view>
+    </mp-cell>
+    <view class="graySpace"></view>
+     <mp-cell>
+        <view>微信设置的语言:{{language}}</view>
+    </mp-cell>
+     <mp-cell>
+        <view>微信版本号:{{version}}</view>
+    </mp-cell>
+    <mp-cell>
+        <view>操作系统及版本:{{system}}</view>
+    </mp-cell>
+</mp-cells>

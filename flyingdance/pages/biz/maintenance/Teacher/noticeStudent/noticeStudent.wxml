@@ -1,0 +1,35 @@
+
+<form bindsubmit='sub'>
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class="weui-cells__title">发布学生通知</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">标题</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='title' placeholder="请输入标题" />
+        </view>
+      </view>
+     
+    <view class="weui-cells__title">通知内容</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" name='text1' placeholder="请输入通知内容" style="height: 3.3em" />
+          <view class="weui-textarea-counter">0/200</view>
+        </view>
+      </view>
+    </view>
+   
+    <view class="weui-btn-area">
+
+      <button class="weui-btn" type="primary" formType="submit">确定</button>
+
+    </view>
+ 
+</view>
+</view>
+</view>
+</form>

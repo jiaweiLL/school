@@ -1,0 +1,20 @@
+
+/* wxml引用 */
+{/* <wxs src="../../xxx/xxx.wxs" module="tools" /> */}
+/* 调用 */
+{/* <text>{{tools.xxxFuc('这是传的参数')}}</text> */}
+
+
+
+/* 小程序脚本语言 用于额外页面处理 */
+function funcs(textStr){
+    return textStr
+}
+
+function getScrollViewHeight(){
+  return 23;
+}
+
+module.exports = {
+  getScrollViewHeight : getScrollViewHeight
+}

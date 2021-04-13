@@ -1,0 +1,65 @@
+<form bindsubmit='sub'>
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class="weui-cells__title">入账信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">汇款帐户</view>
+        </view>
+        <view class="weui-cell__bd">
+        <text>{{EntryData.eremit_account}}</text>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">入账金额</view>
+        </view>
+       <view class="weui-cell__bd">
+       <text>{{EntryData.eremit_money}}</text>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">入账事项</view>
+        </view>
+        <view class="weui-cell__bd">
+        <text>{{EntryData.eremit_note}}</text>
+        </view>
+      </view>
+      <view class="graySpace"></view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">保管员</view>
+        </view>
+        <view class="weui-cell__bd">
+        <text>{{EntryData.estoreman}}</text>
+          
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">负责人</view>
+        </view>
+         <view class="weui-cell__bd">
+          <text>{{EntryData.eleadman}}</text>
+        </view>
+      </view>
+     <view class="graySpace"></view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">入账时间</view>
+        </view>
+        <view class="weui-cell__bd">
+          <text>{{EntryData.etime}}</text>
+          
+        </view>
+      </view>
+
+    </view>
+</view>
+ 
+
+
+</view>
+</form>

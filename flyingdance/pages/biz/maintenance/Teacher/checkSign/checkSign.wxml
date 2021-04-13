@@ -1,0 +1,44 @@
+
+<view class="page">
+    <view class="services_container">
+        <view class='top' style="background:#ffffff">
+            <block wx:for="{{['未签','已签']}}">
+                <view bindtap='onTabsItemTap' data-index='{{index}}' class="top-item">
+                    <text class="{{currentTabsIndex==index?'on':''}}">{{item}}</text>
+                </view>
+            </block>
+        </view>
+        <view class='box'>
+        <view class="page__bd">
+            <view class='video' hidden="{{currentTabsIndex!=0}}">
+                <block wx:for="{{StudentNoSign}}" wx:key="unique">             
+                        <view class="weui-cells" >
+                            <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" throttle="30" name="{{item.id}}" id="{{item.id}}">
+                            <mp-cell value="{{item.name}}" footer=">"></mp-cell>
+                            </mp-slideview>
+                        </view>                
+                </block>     
+            </view>
+            <view class='audio' hidden="{{currentTabsIndex!=1}}">
+                <block wx:for="{{StudentSign}}" wx:key="unique">
+                    <view class="weui-cells">
+                        <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap">
+                        <mp-cell value="{{item.name}}" footer="{{item.time}}"></mp-cell>
+                        </mp-slideview>
+                    </view>
+                </block>   
+            </view>
+        </view>
+        </view>
+    </view>  
+</view>
+
+ <!-- <block wx:for="{{listData}}" wx:key="unique">
+  <view class="tr bg-items" id="{{item.id}}" bindtap="topersonal">
+   <view class="td" id="{{item.id}}" bindtap="topersonal">{{item.name}}</view>
+   <view class="td" id="{{item.id}}" bindtap="topersonal">{{item.phone}}</view>
+   <view class="td" id="{{item.id}}" bindtap="topersonal">{{item.address}}</view>
+   <view class="td" id="{{item.id}}" bindtap="topersonal">{{item.sex}}</view>
+  </view>
+ </block>  -->
+

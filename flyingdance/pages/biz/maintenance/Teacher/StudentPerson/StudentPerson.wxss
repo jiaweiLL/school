@@ -1,0 +1,9 @@
+page{
+  height: 100%
+}
+.graySpace{
+  padding-left: 40rpx;
+  background: #eee;
+  font-size: 12px;
+  min-height: 10rpx;
+}

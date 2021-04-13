@@ -1,0 +1,14 @@
+<view class="page" data-weui-theme="{{theme}}">   
+    <view class="page__hd">
+        <view class="page__title">小飞天舞蹈</view>
+    </view>
+    <view class="page__bd">  
+     <block wx:for="{{allteacher}}" wx:key="unique">
+     <view class="weui-cells">
+          <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" id="{{item.id}}">
+              <mp-cell value="{{item.name}}" footer=">"></mp-cell>
+          </mp-slideview>
+      </view>
+     </block>
+    </view>
+</view>

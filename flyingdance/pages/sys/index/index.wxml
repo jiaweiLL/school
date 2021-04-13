@@ -1,0 +1,17 @@
+<import src="../../../templates/tabar-template/tabar-template.wxml"/>
+
+
+<!-- <text>角色：{{roleId==1?'站长':'管理员'}}</text> -->
+<view class="view">
+  <view>{{scanRs.errMsg}}</view>
+  <view>{{scanRs.scanType}}</view>
+  <view>{{scanRs.result}}</view>
+</view>
+
+<datas wx:if="{{PageCur=='datas'}}"></datas>
+<maintenance wx:if="{{PageCur=='maintenance'}}"></maintenance>
+<monitor wx:if="{{PageCur=='monitor'}}"></monitor>
+<mine wx:if="{{PageCur=='mine'}}"></mine>
+
+<!-- tabar菜单 -->
+<template is="tabBar" data="{{menus}}"  />

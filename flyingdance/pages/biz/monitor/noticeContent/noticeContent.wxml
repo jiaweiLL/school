@@ -1,0 +1,18 @@
+<!--pages/post/post-detail/post-detail.wxml-->
+<!--先静后动，先样式再数据-->
+<view class="detail-container">
+  <image class="head-image" src="{{NoticeData.url}}"></image>
+  <view class="author-date">
+    <mp-icon icon="sticker" color="black" size="{{25}}"></mp-icon>
+    <text class="author">{{NoticeData.putname}}</text>
+    <text class="const-text">发表于</text>
+    <text class="date">{{NoticeData.time}}</text>
+  </view>
+  <text class="title">{{NoticeData.title}}）</text>
+  <view class="tool">
+    <view class="circle-img">
+    </view>
+    <view class="horizon"></view>
+  </view>
+  <text class="detail">{{NoticeData.content}}</text>
+</view>

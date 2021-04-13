@@ -1,0 +1,118 @@
+<form bindsubmit='sub'>
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class="weui-cells__title">添加员工</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">姓名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='name' placeholder="请输入姓名" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">性别</view>
+        </view>
+        <view class="weui-cell__bd">
+            <radio-group name="sex">
+            <label>男<radio value="男"/></label>
+            <label>女<radio value="女"/></label>
+            </radio-group>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">出生日期</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" value="{{date}}" start="1990-01-01" end="2020-01-01" bindchange="bindDateChange" name="age">
+            <view class="picker">
+              选择: {{date}}
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="graySpace"></view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">电话</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='phone' placeholder="请输入电话" />
+        </view>
+      </view>
+      <view class="graySpace"></view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">账号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='sno' placeholder="请输入账号" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">密码</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='password' placeholder="请输入密码" />
+        </view>
+      </view>
+      <view class="graySpace"></view>
+       <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">入职时间</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" value="{{time}}" name="time" start="2010-01-01" end="2030-01-01" bindchange="bindtimeChange">
+            <view class="picker" name="time">
+              选择: {{time}}
+            </view>
+          </picker>
+        </view>
+      </view>
+       <view class="graySpace"></view>
+       <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">员工类型</view>
+              </view>
+            <radio-group class="radio-group" bindchange="radioChange">
+                <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
+                    <text decode="{{true}}">&emsp;&emsp;{{item.value}}&nbsp;</text>
+                </radio>
+            </radio-group>
+     </view>
+     <view wx:if="{{power=='校长2'}}">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label" style="padding:10rpx">校区名字</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name='school' placeholder="请输入校区名字" />
+          </view>
+        </view>
+     </view>
+     <view wx:else></view>
+
+    <view class="weui-cells__title">家庭地址</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" name='address' placeholder="请输入家庭地址" style="height: 3.3em" />
+          <view class="weui-textarea-counter">0/200</view>
+        </view>
+      </view>
+    </view>
+   </view>
+    <view class="weui-btn-area">
+
+      <button class="weui-btn" type="primary" formType="submit">确定</button>
+
+    </view>
+ 
+
+</view>
+</view>
+</form>

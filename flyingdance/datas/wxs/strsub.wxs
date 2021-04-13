@@ -1,0 +1,32 @@
+var subStr = function (val, start, stop) {
+  if (val) {
+    return val.substring(start, stop)
+  } else {
+    return ''
+  }
+}
+// magic.wxs
+var split = function (tag) {
+  if(tag){
+    var a = tag.split(" ");//我这里请求到的数据是以'.'分隔的，需要根据业务需求改成你自己的分隔符
+    return a;
+  }else{
+    return
+  }
+}
+
+
+var subDate = function (val) {
+  if (val) {
+    return val.substring(0, 10)
+  } else {
+    return ''
+  }
+}
+
+module.exports = {
+  subStr: subStr,
+  split: split,
+  subDate: subDate
+};
+

@@ -1,0 +1,32 @@
+
+<!-- 普通菜单模板 -->
+<template name="tabBar">
+  <view class="cu-bar tabbar bg-black shadow foot"  >
+    <view class="action" bindtap="NavChange" data-cur="{{item.currentUrl}}" wx:for="{{menus.list}}" wx:key="currentUrl">
+      <view class='cuIcon-cu-image'>
+        <image src="{{menus.activeUrl==item.currentUrl?item.checkedImgUrl:item.unCheckImgUrl}}"></image>
+      </view>
+      <view class="{{menus.activeUrl==item.currentUrl?'text-pink':'text-gray'}}">{{item.title}}</view>
+    </view>
+  </view>
+</template>
+
+<!-- 自定义菜单模板 -->
+<template name="tabBar">
+  <view class="cu-bar tabbar bg-black shadow foot"  >
+    <view class="action" bindtap="NavChange" data-cur="{{item.currentUrl}}" wx:for="{{menus.list}}" wx:key="currentUrl">
+      <view wx:if="{{item.btnType==0}}">
+        <view class='cuIcon-cu-image'>
+          <image src="{{menus.activeUrl==item.currentUrl?item.checkedImgUrl:item.unCheckImgUrl}}"></image>
+        </view>
+        <view class="{{menus.activeUrl==item.currentUrl?'text-pink':'text-gray'}}">{{item.title}}</view>
+      </view>
+       <view wx:else="{{item.btnType==0}}">
+        <view class="action text-{{item.btnTitleTextColor==''?'gray':item.btnTitleTextColor}} add-action" bindtap="{{item.bindTap}}">
+          <button class="cu-btn cuIcon-add text-{{item.btnImgTextColor=='white'?'':item.btnImgTextColor}} bg-{{item.btnBgColor==''?'black':item.btnBgColor}}}  shadow"></button> 
+          <view>{{item.title}}</view>
+        </view>
+       </view>
+    </view>
+  </view>
+</template>

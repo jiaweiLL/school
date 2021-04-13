@@ -1,0 +1,25 @@
+<wxs src="../../../../../datas/wxs/strsub.wxs" module="tools" />
+    <view class="services_container">
+        <view class='top' style="background:#ffffff">
+            <block wx:for="{{['签到记录']}}">
+                <view bindtap='onTabsItemTap' data-index='{{index}}' class="top-item">
+                    <text class="{{currentTabsIndex==index?'on':''}}">{{item}}</text>
+                </view>
+            </block>
+        </view>
+        <block wx:for="{{list}}" wx:key="unique">  
+        <view class="cu-timeline">
+            <view class="cu-time">{{tools.subStr(item.time,5,10)}}</view>
+            <view class="cu-item">
+                <view class="content">
+                <view class="cu-capsule radius">
+                    <view class="cu-tag bg-cyan">时间</view>
+                    <view class="cu-tag line-cyan">{{tools.subStr(item.time,11,19)}}</view>
+                </view>
+                <view class="margin-top">课程老师:{{item.teacher}}\n\n\n\n课程名字:{{class_name}}</view>
+                </view>
+            </view>
+        </view>
+        </block> 
+    </view>  
+

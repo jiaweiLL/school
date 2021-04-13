@@ -1,0 +1,24 @@
+
+<scroll-view scroll-y class="scrollPage">
+<image src='http://img.flyingdance.vip/back.png' mode='widthFix' class='png' style='width:100%;height:486rpx'></image>
+  <view class="cu-card">
+    <view class="cu-item bg-img shadow-blur" style="background-image:url({{item.img}})" bindtap="toChild" data-url="{{item.url}}" data-title="{{item.title}}" data-url="{{item.url}}" bindtap="goPage" wx:for="{{elements}}" wx:key>
+      <view class="cardTitle">
+        {{item.title}}
+      </view>
+    </view>
+  </view>
+  <view class="cu-tabbar-height"></view>
+</scroll-view>
+<!-- <scroll-view scroll-y class="scrollPage">
+  
+  <view class='nav-list'>
+    <navigator open-type="navigate" hover-class='none' url="/xx" class="nav-li" wx:for="{{elements}}" wx:key="color" style="background-size:100% 100%;background-image:url({{item.back}})" data-title="{{item.title}}" data-url="{{item.url}}" bindtap="goPage">
+    <cover-image src="{{item.back}}"></cover-image>
+      <view class="nav-title" >{{item.title}}</view>
+      <view class="nav-name">{{item.name}}</view>
+      <text class='cuIcon-{{item.icon}}'></text>
+    </navigator>
+  </view>
+  <view class='cu-tabbar-height'></view>
+</scroll-view> -->

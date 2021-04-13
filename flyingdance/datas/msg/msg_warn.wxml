@@ -1,0 +1,23 @@
+<view class="page" data-weui-theme="{{theme}}">
+	<view class="weui-msg">
+		<view class="weui-msg__icon-area"><i class="weui-icon-warn weui-icon_msg"></i></view>
+		<view class="weui-msg__text-area">
+			<h2 class="weui-msg__title">操作失败</h2>
+		</view>
+		<view class="weui-msg__tips-area">
+			<view class="weui-msg__tips">联系程序员解决</view>
+		</view>
+		<view class="weui-msg__opr-area">
+			<view class="weui-btn-area">
+      <a bindtap="gopage" url="{{url}}" class="weui-btn weui-btn_primary">点击返回</a>
+			</view>
+		</view>
+		<view class="weui-msg__extra-area">
+			<view class="weui-footer">
+				<view class="weui-footer__links">
+				</view>
+				<view class="weui-footer__text">Copyright &jiawei; 2008-2016 </view>
+			</view>
+		</view>
+	</view>
+</view>

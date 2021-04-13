@@ -1,0 +1,146 @@
+<form bindsubmit='updata'>
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class="weui-cells__title">基本资料</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">姓名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='cname' value="{{StudentData.cname}}"  placeholder="{{StudentData.cname}}" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">性别</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value="{{StudentData.csex}}" name='csex' placeholder="{{StudentData.csex}}" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">生日</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value="{{StudentData.cage}}" name='cage' placeholder="{{StudentData.cage}}" />
+        </view>
+      </view>
+      <view class="graySpace"></view>
+    
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">父母</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value="{{StudentData.cparents}}" name='cparents' placeholder="{{StudentData.cparents}}" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">手机号</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value="{{StudentData.cphone}}" name='cphone' placeholder="{{StudentData.cphone}}" />
+        </view>
+      </view>
+
+    </view>
+    <view class="weui-cells__title">跟进资料</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">介绍人</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='cintroduce' value="{{StudentData.cintroduce}}"  placeholder="{{StudentData.cintroduce}}" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">咨询方法</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value="{{StudentData.consultation_method}}" name='consultation_method' placeholder="{{StudentData.consultation_method}}" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">课程</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value="{{StudentData.consultation_course}}" name='consultation_course' placeholder="{{StudentData.consultation_course}}" />
+        </view>
+      </view>
+      <view class="graySpace"></view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">回访日期</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value="{{StudentData.creturn_visit}}" name='creturn_visit' placeholder="{{StudentData.creturn_visit}}" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">咨询学校</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value="{{StudentData.consulting_school}}" name='consulting_school' placeholder="{{StudentData.consulting_school}}" />
+        </view>
+      </view>  
+    </view>
+    <view class="weui-cells__title">沟通内容</view>
+          <view class="weui-cells weui-cells_after-title">
+             <view class="weui-cell">
+              <view class="weui-cell__bd">
+                 <textarea class="weui-textarea" name='communication_content' value="{{StudentData.communication_content}}" placeholder="{{StudentData.communication_content}}" style="height: 3.3em" />
+                  <view class="weui-textarea-counter">0/200</view>
+               </view>
+            </view>
+          </view>
+    <view class="graySpace"></view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell weui-cell_input">     
+        <view class="weui-cell__hd">
+          <view class="section__title">跟进状态</view>
+        </view>  
+        <view class="section">
+        <view class="weui-cell__bd">
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+                选择：{{array[cfollow_status]}}
+            </view>
+          </picker>
+          </view>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">渠道</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" value="{{StudentData.channel}}" name='channel' placeholder="{{StudentData.channel}}" />
+        </view>
+      </view>
+        <view class="weui-cell weui-cell_input">
+            <view class="weui-cell__hd">
+              <view class="weui-label" style="padding:10rpx">销售人</view>
+            </view>
+            <view class="weui-cell__bd">
+              <input class="weui-input" value="{{StudentData.csalesman}}" name='csalesman' placeholder="{{StudentData.csalesman}}" />
+            </view>
+          </view>
+    </view>  
+    <view class="weui-btn-area">
+
+      <button class="weui-btn" type="primary" formType="submit">更新</button>
+
+    </view>
+
+ 
+
+</view>
+</view>
+</form>

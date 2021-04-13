@@ -1,0 +1,88 @@
+<form bindsubmit='sub'>
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class="weui-cells__title">入账</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">汇款帐户</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='eremit_account' placeholder="请输入汇款帐户" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">入账金额</view>
+        </view>
+       <view class="weui-cell__bd">
+          <input class="weui-input" name='eremit_money' placeholder="请输入入账金额" />
+        </view>
+      </view>
+       <view class="weui-cells__title">入账事项</view>
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell">
+            <view class="weui-cell__bd">
+              <textarea class="weui-textarea" name='eremit_note' placeholder="入账事项" style="height: 3.3em" />
+              <view class="weui-textarea-counter">0/200</view>
+            </view>
+          </view>
+        </view>
+      <view class="graySpace"></view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">保管员</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='estoreman' placeholder="请输入保管员" />
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">负责人</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='eleadman' placeholder="请输入负责人" />
+        </view>
+      </view>
+       <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">所属部门</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='edepartment' placeholder="请输入部门名" />
+        </view>
+      </view>
+      <view class="graySpace"></view>
+     
+   <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">入账日期</view>
+        </view>
+        <view class="weui-cell__bd">
+          <picker mode="date" value="{{time}}" name="time" start="2010-01-01" end="2030-01-01" bindchange="bindtimeChange">
+            <view class="picker" name="time">
+              选择: {{time}}
+            </view>
+          </picker>
+        </view>
+      </view>
+
+
+
+
+
+
+
+
+       </view>
+    <view class="weui-btn-area">
+
+      <button class="weui-btn" type="primary" formType="submit">确定</button>
+
+    </view>
+ 
+
+</view>
+</view>
+</form>

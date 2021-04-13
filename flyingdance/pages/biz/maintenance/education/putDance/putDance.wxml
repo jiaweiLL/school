@@ -1,0 +1,85 @@
+<form bindsubmit='sub' >
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">小飞天舞蹈</view>
+    </view>
+
+  <view class="container">
+      <view class='image-wrap'>
+              <view style="backgound:#ffffff">
+                <view style="padding:10rpx">请选择一张视频封面图片</view>
+              </view>
+          <view class='add-photo'>
+              
+              <view class='photo-wrap' wx:for="{{picUrls}}" wx:key="{{item}}">
+                  <image class='photo' src='{{item}}' mode="aspectFill"></image>
+              </view>
+              <view class='btn-wrap' bindtap="chooseImage">
+                  <view class='photo-img'></view>
+              </view>
+          </view>
+      </view>
+      <view class="graySpace"></view>
+      <view class='image-wrap'>
+              <view style="backgound:#ffffff">
+                <view style="padding:10rpx">请选择视频</view>
+              </view>
+          <view class='add-photo'>     
+               <view class="page-body-info">
+                  <block wx:if="{{src === ''}}">
+                    <view class='btn-wrap' bindtap="chooseVideo">
+                        <view class='photo-img'></view>
+                    </view>
+                  </block>
+                  <block wx:if="{{src != ''}}">
+                    <video src="{{src}}" class="video"></video>
+                  </block>
+              </view>
+
+          </view>
+      </view>
+  </view>
+
+
+  <view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+  <view class="weui-cell__hd">
+        <view class="weui-cell__hd">
+           <view class="weui-label" style="padding:10rpx">舞蹈类型</view>
+        </view>
+          <radio-group bindchange="radioChange">
+              <radio value='拉丁舞' checked>拉丁舞</radio>
+              <radio value='爵士舞'>爵士舞</radio>
+              <radio value='民族舞'>民族舞</radio>
+              <radio value='芭蕾舞'>芭蕾舞</radio>
+              <radio value='古典舞'>古典舞</radio>
+              <radio value='华尔兹'>华尔兹</radio>
+          </radio-group>
+     </view>
+  </view>
+  </view>
+  <view class="page__bd"><view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">视频标题</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='title' placeholder="请输入标题" />
+        </view>
+      </view>
+      <view class="weui-cells__title">描述文本</view>
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <textarea class="weui-textarea" name='content' placeholder="请输入描述文本" style="height: 3.3em" />
+            <view class="weui-textarea-counter">0/100</view>
+          </view>
+        </view>
+      </view>
+  </view>    
+  <view class="weui-btn-area">
+
+      <button class="weui-btn" type="primary" formType="submit">提交</button>
+
+    </view>
+</view>
+</form>

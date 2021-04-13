@@ -1,0 +1,76 @@
+<form bindsubmit='updata'>
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <view class="page__bd">
+    <view class="weui-cells__title">确认信息</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">姓名：</view>
+        </view>
+        <view class="weui-cell__bd">
+          <mp-cell>
+        <view>{{name}}</view>
+         </mp-cell>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">账号：</view>
+        </view>
+        <view class="weui-cell__bd">
+          <mp-cell>
+        <view>{{sno}}</view>
+         </mp-cell>
+        </view>
+      </view>
+       <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">老师：</view>
+        </view>
+        <view class="weui-cell__bd">
+          <mp-cell>
+         <view>{{name}}</view>
+          </mp-cell>
+        </view>
+      </view>
+      <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">班级：</view>
+        </view>
+        <view class="weui-cell__bd">
+          <mp-cell>
+        <view>{{class_name}}</view>
+         </mp-cell>
+        </view>
+      </view>    
+    </view>
+    <view class="weui-cells__title">支付金额</view>
+
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">金额</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='money' placeholder="请输入缴费金额（单位/元）" />
+        </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+        <view class="weui-cell__hd">
+          <view class="weui-label" style="padding:10rpx">课时</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input" name='class_hour' placeholder="请输入增加课时" />
+        </view>
+    </view>
+
+    <view class="weui-btn-area">
+
+      <button class="weui-btn" type="primary" formType="submit">确定</button>
+
+    </view>
+
+ 
+
+</view>
+</view>
+</form>

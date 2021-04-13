@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "datas": "/pages/biz/datas/home/home",
+    "maintenance": "/pages/biz/maintenance/home/home",
+    "monitor": "/pages/biz/monitor/home/home",
+    "mine": "/pages/biz/mine/home/home"
+  }
+}

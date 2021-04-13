@@ -1,0 +1,33 @@
+
+<mp-cells ext-class="my-cells" title="学生信息">
+    <mp-cell>
+        <view>名字:{{StudentData.name}}</view>
+    </mp-cell>
+     <mp-cell>
+        <view>性别:{{StudentData.sex}}</view>
+    </mp-cell>
+    <view class="graySpace"></view>
+     <mp-cell>
+        <view>账号:{{StudentData.sno}}</view>
+    </mp-cell>
+    <mp-cell>
+        <view>密码:{{StudentData.password}}</view>
+    </mp-cell>
+    <view class="graySpace"></view>
+     <mp-cell>
+        <view>地址:{{StudentData.address}}</view>
+    </mp-cell>
+     <mp-cell>
+        <view>生日:{{StudentData.age}}</view>
+    </mp-cell>
+    <view class="graySpace"></view>
+    <mp-cell>
+        <view>舞蹈等级:{{StudentData.level}}</view>
+    </mp-cell>
+</mp-cells>
+<view class="graySpace"></view>
+<mp-cells ext-class="my-cells" title=""></mp-cells>
+    <view slot="button" >
+    <button class="weui-btn" type="primary" bindtap="update">编辑</button>
+    <button class="weui-btn" type="primary" bindtap="delete" style="background:red" >删除</button>
+    </view>
